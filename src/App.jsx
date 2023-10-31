@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-
+import {LiaTemperatureHighSolid} from 'react-icons/lia'
+import {SiGamedeveloper} from 'react-icons/si'
 function App() {
-  const [Celsius, setCelsius] = useState(0);
-  const [Fahrenheit, setFahrenheit] = useState(0);
+  const [Celsius, setCelsius] = useState("0");
+  const [Fahrenheit, setFahrenheit] = useState("32");
 
   const handleCelsiusChange = (event) => {
     const celsiusValue = event.target.value;
@@ -21,11 +22,14 @@ function App() {
 
   return (
     <div className='screen'>
-      <div className='txt1'>TEMPERATURE CONVERSION</div>
+      <div className='developer'><h2 className='txt2'>Made By Sachin & Saif <SiGamedeveloper style={{color:"black",marginBottom:"-4.5px"}}/></h2></div>
+      <div className='txt1'>TEMPERATURE CONVERSION
+    <LiaTemperatureHighSolid className='temp-logo' />
+      </div>
       <div className='converter-box'>
         <div className='value-get'>
           <div>
-            <h2>Celsius</h2>
+            <h2 >Celsius</h2>
             <input
               type="text"
               value={Celsius}
